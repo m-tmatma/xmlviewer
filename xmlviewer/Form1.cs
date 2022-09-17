@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
+using System.Diagnostics;
 
 namespace xmlviewer
 {
@@ -66,6 +67,7 @@ namespace xmlviewer
                     newTreeNode.Text = "<!--" + xmlNode.Value + "-->";
                     break;
             }
+            Debug.WriteLine($"{xmlNode.Name} {xmlNode.Value}");
 
 
             if (xmlNode.Attributes != null)
